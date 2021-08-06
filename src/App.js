@@ -1,0 +1,88 @@
+import React from 'react';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Redirect,
+   
+} from 'react-router-dom';
+
+
+
+
+
+
+// import { MuiThemeProvider } from '@material-ui/core';
+
+
+import NFY from './views/NFY';
+import BitAlliance from './views/BitAlliance';
+// import Acme from './views/Acme';
+// import ChurcheOfTheChain from './views/ChurcheOfTheChain';
+// import Eros from './views/Eros';
+// import Mimir from './views/Mimir';
+// import Pantheon from './views/Pantheon';
+import Layout from './layout';
+// import WhatIsNFY from './views/WhatIsNFY';
+
+import './App.css';
+
+
+
+function App() {
+    return (
+        <Router>
+            <Switch>
+                <Route path="/nfy" exact>
+                    <Layout>
+                        <NFY />
+                    </Layout>
+                </Route>
+                <Route path="/bit-alliance" exact>
+                    <Layout>
+                        <BitAlliance />
+                    </Layout>
+                </Route>
+               
+                {/* <Route path="/what-is-nfy" exact>
+                    <Layout>
+                        <WhatIsNFY />
+                    </Layout>
+                </Route> */}
+
+                {/* <Route path="/acme" exact>
+                    <Layout>
+                        <Acme />
+                    </Layout>
+                </Route>
+                <Route path="/churche-of-the-chain" exact>
+                    <Layout>
+                        <ChurcheOfTheChain />
+                    </Layout>
+                </Route>
+                <Route path="/eros" exact>
+                    <Layout>
+                        <Eros />
+                    </Layout>
+                </Route>
+                <Route path="/mimir" exact>
+                    <Layout>
+                        <Mimir />
+                    </Layout>
+                </Route>
+                <Route path="/pantheon" exact>
+                    <Layout>
+                        <Pantheon />
+                    </Layout>
+                </Route> */}
+                <Redirect to="/nfy">
+                    <Layout>
+                        <NFY />
+                    </Layout>
+                </Redirect>
+            </Switch>
+        </Router>
+    );
+}
+
+export default App;
