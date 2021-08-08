@@ -5,13 +5,14 @@ import Main2 from '../components/Main2';
 
 
 function BitAlliance() {
-    return <div>
-     {/* <div className= "bitAlliance-view" id="bitAlliance-view">
-    <Main2 currency="BitAlliance"/>
-    </div> */}
-    );
-   
-    <Typography variant="h5"style={{textAlign:'center', fontWeight:'500px', fontFamily:'Verdana', color:'#0000f' }}>Bit Alliance Coming Soon</Typography>
+    
+    return ( 
+    <div 
+    // className= "bitAlliance-view" id="bitAlliance-view"
+    >
+    {/* <Main2 currency="BitAlliance"/> */}
+
+    <Typography variant="h5"style={{textAlign:'center', fontWeight:'500px', fontFamily:'Verdana', color:'#0000f' }}>Bit Alliance Coming Soon!</Typography>
     <br></br>
     
     <br></br>
@@ -19,11 +20,17 @@ function BitAlliance() {
     <Typography variant="h6"style={{textAlign:'center', marginLeft:'100px',marginRight:'100px', color:'#39FF14' }}>“Tracking your investments is what we can give you, more tokens coming soon”
 </Typography>
 <br></br>
-
-
     </div>
-    
+
+
+
+
+    );
     
 }
+   
+   
+    
+    
 
 export default BitAlliance;
