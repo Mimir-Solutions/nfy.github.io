@@ -118,34 +118,34 @@ function SlideOne() {
                             </div>
                             <div className={clsx(styles.pairContainer)}>
                                 <div>
-                                    <Typography
+                                    {/* <Typography
                                         className={clsx(styles.textUppercase)}
                                         component="span"
                                         color="secondary"
                                     >
                                         apy:&nbsp;
-                                    </Typography>
-                                    <Typography
+                                    </Typography> */}
+                                    {/* <Typography
                                         className={clsx(styles.textUppercase)}
                                         component="span"
                                     >
                                         n/a&nbsp;&nbsp;
-                                    </Typography>
+                                    </Typography> */}
                                 </div>
                                 <div>
-                                    <Typography
+                                    {/* <Typography
                                         className={clsx(styles.textUppercase)}
                                         component="span"
                                         color="secondary"
                                     >
                                         your rewards&nbsp;
-                                    </Typography>
-                                    <Typography
+                                    </Typography> */}
+                                    {/* <Typography
                                         className={clsx(styles.textUppercase)}
                                         component="span"
                                     >
                                         n/a&nbsp;&nbsp;
-                                    </Typography>
+                                    </Typography> */}
                                 </div>
                             </div>
                             <FormControl
@@ -253,7 +253,7 @@ function SlideOne() {
                             </div>
                             <div className={clsx(styles.pairContainer)}>
                                 <div>
-                                    <Typography
+                                    {/* <Typography
                                         className={clsx(styles.textUppercase)}
                                         component="span"
                                         color="secondary"
@@ -265,10 +265,10 @@ function SlideOne() {
                                         component="span"
                                     >
                                         n/a&nbsp;&nbsp;
-                                    </Typography>
+                                    </Typography> */}
                                 </div>
                                 <div>
-                                    <Typography
+                                    {/* <Typography
                                         className={clsx(styles.textUppercase)}
                                         component="span"
                                         color="secondary"
@@ -280,7 +280,7 @@ function SlideOne() {
                                         component="span"
                                     >
                                         n/a&nbsp;&nbsp;
-                                    </Typography>
+                                    </Typography> */}
                                 </div>
                             </div>
                             <FormControl

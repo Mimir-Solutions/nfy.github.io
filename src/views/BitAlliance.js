@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography } from '@material-ui/core';
 import "../../src/index.css"
-import Main2 from '../components/Main2';
+// import Main2 from '../components/Main2';
 
 
 function BitAlliance() {

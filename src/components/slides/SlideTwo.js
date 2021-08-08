@@ -127,7 +127,7 @@ function SlideTwo() {
                             </div>
                             <div className={clsx(styles.pairContainer)}>
                                 <div>
-                                    <Typography
+                                    {/* <Typography
                                         className={clsx(styles.textUppercase)}
                                         component="span"
                                         color="secondary"
@@ -139,10 +139,10 @@ function SlideTwo() {
                                         component="span"
                                     >
                                         n/a&nbsp;&nbsp;
-                                    </Typography>
+                                    </Typography> */}
                                 </div>
                                 <div>
-                                    <Typography
+                                    {/* <Typography
                                         className={clsx(styles.textUppercase)}
                                         component="span"
                                         color="secondary"
@@ -154,7 +154,7 @@ function SlideTwo() {
                                         component="span"
                                     >
                                         n/a&nbsp;&nbsp;
-                                    </Typography>
+                                    </Typography> */}
                                 </div>
                             </div>
                             <FormControl
@@ -296,7 +296,7 @@ function SlideTwo() {
                             </div>
                             <div className={clsx(styles.pairContainer)}>
                                 <div>
-                                    <Typography
+                                    {/* <Typography
                                         className={clsx(styles.textUppercase)}
                                         component="span"
                                         color="secondary"
@@ -308,11 +308,11 @@ function SlideTwo() {
                                         component="span"
                                     >
                                         n/a&nbsp;&nbsp;
-                                    </Typography>
-                                    <br></br>
+                                    </Typography> */}
+                                   
                                 </div>
                                 <div>
-                                    <Typography
+                                    {/* <Typography
                                         className={clsx(styles.textUppercase)}
                                         component="span"
                                         color="secondary"
@@ -324,7 +324,7 @@ function SlideTwo() {
                                         component="span"
                                     >
                                         n/a&nbsp;&nbsp;
-                                    </Typography>
+                                    </Typography> */}
                                 </div>
                             </div>
                             <FormControl
