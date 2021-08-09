@@ -77,7 +77,7 @@
 }
 
 #nfy-view.nfy-view{
-    background-image: url('./assets/images/dark.jpg');
+    background-image: url('./assets/images/nfyplatbg.png');
     background-size:cover;
     
     background-position: center center ;
@@ -86,8 +86,8 @@
 
 }
 
-#bitAlliance2-view.bitAlliance2-view{
-    background-image: url('./assets/images/blue.jpg');
+#bitAlliance-view.bitAlliance-view{
+    background-image: url('./assets/images/babg.png');
     background-size:cover;
     
     background-position: center center ;
