@@ -1,5 +1,5 @@
 import React from 'react';
-import Main2 from '../components/Main2';
+// import Main2 from '../components/Main2';
 import "../../src/index.css"
 import {Typography} from '@material-ui/core';
 
