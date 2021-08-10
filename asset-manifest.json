@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/nfy.github.io/static/css/main.bdf4d6c5.chunk.css",
-    "main.js": "/nfy.github.io/static/js/main.7cbcfed9.chunk.js",
-    "main.js.map": "/nfy.github.io/static/js/main.7cbcfed9.chunk.js.map",
+    "main.css": "/nfy.github.io/static/css/main.bcbea323.chunk.css",
+    "main.js": "/nfy.github.io/static/js/main.37abb44a.chunk.js",
+    "main.js.map": "/nfy.github.io/static/js/main.37abb44a.chunk.js.map",
     "runtime-main.js": "/nfy.github.io/static/js/runtime-main.35312fb0.js",
     "runtime-main.js.map": "/nfy.github.io/static/js/runtime-main.35312fb0.js.map",
     "static/js/2.347203a7.chunk.js": "/nfy.github.io/static/js/2.347203a7.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.bee0a476.chunk.js": "/nfy.github.io/static/js/3.bee0a476.chunk.js",
     "static/js/3.bee0a476.chunk.js.map": "/nfy.github.io/static/js/3.bee0a476.chunk.js.map",
     "index.html": "/nfy.github.io/index.html",
-    "static/css/main.bdf4d6c5.chunk.css.map": "/nfy.github.io/static/css/main.bdf4d6c5.chunk.css.map",
+    "static/css/main.bcbea323.chunk.css.map": "/nfy.github.io/static/css/main.bcbea323.chunk.css.map",
     "static/js/2.347203a7.chunk.js.LICENSE.txt": "/nfy.github.io/static/js/2.347203a7.chunk.js.LICENSE.txt",
     "static/media/App.css": "/nfy.github.io/static/media/pantheon.e515f331.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.35312fb0.js",
     "static/js/2.347203a7.chunk.js",
-    "static/css/main.bdf4d6c5.chunk.css",
-    "static/js/main.7cbcfed9.chunk.js"
+    "static/css/main.bcbea323.chunk.css",
+    "static/js/main.37abb44a.chunk.js"
   ]
 }
