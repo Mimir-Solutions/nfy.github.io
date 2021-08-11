@@ -124,6 +124,7 @@ function SlideTwo() {
                                 >
                                     n/a n/a
                                 </Typography>
+                                <br></br>
                             </div>
                             <div className={clsx(styles.pairContainer)}>
                                 <div>
