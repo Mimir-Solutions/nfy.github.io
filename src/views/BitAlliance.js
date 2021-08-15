@@ -14,7 +14,7 @@ function BitAlliance() {
     >
     {/* <Main2 currency="BitAlliance"/> */}
     
-    <Typography variant="h5"style={{textAlign:'center', fontWeight:'500px', fontFamily:'Verdana', color:'#0000f' }}>Bit Alliance Coming Soon!</Typography>
+    <Typography variant="h5"style={{textAlign:'center', fontWeight:'500px', fontFamily:'Verdana', color:'#0000f' }}>Bit Alliance is Coming Soon!</Typography>
     <br></br>
     
     <br></br>
