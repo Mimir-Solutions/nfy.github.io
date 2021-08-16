@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Grid, Box, Typography, Button } from '@material-ui/core';
+import { Grid, Box, Typography } from '@material-ui/core';
 
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
@@ -29,11 +29,9 @@ export const Main = (props) => {
     const styles = useStyles();
 
     return (
-        
         <Grid container spacing={3}>
             <Grid container item spacing={3}>
                 <Grid md={4} xs={12} item>
-                    
                     <Box
                         // margin={1}
                         border="1px solid"
@@ -63,9 +61,8 @@ export const Main = (props) => {
                         <Typography variant="p">$15</Typography>
                     </Box>
                 </Grid>
-                
+
                 <Grid md={4} xs={12} item>
-                    
                     <Box
                         // margin={1}
                         border="1px solid"
@@ -97,7 +94,6 @@ export const Main = (props) => {
                 </Grid>
 
                 <Grid md={4} xs={12} item>
-                    
                     <Box
                         // margin={1}
                         border="1px solid"
@@ -128,7 +124,6 @@ export const Main = (props) => {
                     </Box>
                 </Grid>
                 <Grid md={4} xs={12} item>
-                    
                     <Box
                         // margin={1}
                         border="1px solid"
@@ -186,7 +181,6 @@ export const Main = (props) => {
                             {/* <LocalOfferOutlined /> */}
                         </Box>
                         <Typography variant="p">$2113</Typography>
-                       
                     </Box>
                 </Grid>
                 <Grid md={4} xs={12} item>
@@ -217,7 +211,6 @@ export const Main = (props) => {
                         </Box>
                         <Typography variant="p">65.23548</Typography>
                     </Box>
-                    
                 </Grid>
             </Grid>
             <br></br>
@@ -257,23 +250,19 @@ export const Main = (props) => {
                             <Typography variant="p">Value</Typography>
                             <Typography variant="p">$0</Typography>
                         </Box>
-                      
-                        
+
                         <Box display="flex" flexDirection="column">
                             <Typography variant="p">7d Supply APR</Typography>
                             <Typography variant="p">$500</Typography>
                         </Box>
-                        
+
                         <Box display="flex" flexDirection="column">
                             <Typography variant="p">VALUE</Typography>
                             <Typography variant="p">$1212.45</Typography>
-                            
                         </Box>
-                        
-                        
+
                         <Box>
-                            
-{/*                                
+                            {/*                                
                             <Button className="btn btn-secondary py-2 px-3 d-inline-block mr-1">
                                 Options
                             </Button> */}
@@ -282,17 +271,11 @@ export const Main = (props) => {
                                 <br></br>
                                 
                             </Button> */}
-                            
-                            
                         </Box>
-                        
-                        
-                        
                     </Box>
                 </Box>
             </Grid>
-           
-            
+
             <Grid container justifyContent="center" item>
                 <Carousel
                     navButtonsAlwaysVisible

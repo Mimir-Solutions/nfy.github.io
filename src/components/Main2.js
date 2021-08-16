@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Grid, Box, Typography, Button } from '@material-ui/core';
+import { Grid, Box, Typography } from '@material-ui/core';
 // IconButton, Button
 // import {
 //     Storefront,
@@ -10,7 +10,6 @@ import { Grid, Box, Typography, Button } from '@material-ui/core';
 // } from '@material-ui/icons';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
-
 
 const useStyles = makeStyles((theme) => ({
     marginVertical: {
@@ -32,11 +31,9 @@ export const Main2 = (props) => {
     const styles = useStyles();
 
     return (
-        
         <Grid container spacing={3}>
             <Grid container item spacing={3}>
                 <Grid md={4} xs={12} item>
-                    
                     <Box
                         // margin={1}
                         border="1px solid"
@@ -66,9 +63,8 @@ export const Main2 = (props) => {
                         <Typography variant="p">$25</Typography>
                     </Box>
                 </Grid>
-                
+
                 <Grid md={4} xs={12} item>
-                    
                     <Box
                         // margin={1}
                         border="1px solid"
@@ -100,7 +96,6 @@ export const Main2 = (props) => {
                 </Grid>
 
                 <Grid md={4} xs={12} item>
-                    
                     <Box
                         // margin={1}
                         border="1px solid"
@@ -131,7 +126,6 @@ export const Main2 = (props) => {
                     </Box>
                 </Grid>
                 <Grid md={4} xs={12} item>
-                    
                     <Box
                         // margin={1}
                         border="1px solid"
@@ -189,7 +183,6 @@ export const Main2 = (props) => {
                             {/* <LocalOfferOutlined /> */}
                         </Box>
                         <Typography variant="p">$40</Typography>
-                       
                     </Box>
                 </Grid>
                 <Grid md={4} xs={12} item>
@@ -220,7 +213,6 @@ export const Main2 = (props) => {
                         </Box>
                         <Typography variant="p">56.44</Typography>
                     </Box>
-                    
                 </Grid>
             </Grid>
             <br></br>
@@ -260,18 +252,13 @@ export const Main2 = (props) => {
                             <Typography variant="p">Value</Typography>
                             <Typography variant="p">$0</Typography>
                         </Box>
-                      
-                        
+
                         <Box display="flex" flexDirection="column">
                             <Typography variant="p">VALUE</Typography>
                             <Typography variant="p">$1212.45</Typography>
-                            
                         </Box>
-                        
-                        
+
                         <Box>
-                            
-                               
                             {/* <Button className="btn btn-secondary py-2 px-3 d-inline-block mr-1">
                                 Options
                             </Button> */}
@@ -280,17 +267,10 @@ export const Main2 = (props) => {
                                 <br></br>
                                 
                             </Button> */}
-                            
-                            
                         </Box>
-                        
-                        
-                        
                     </Box>
                 </Box>
             </Grid>
-           
-            
         </Grid>
     );
 };
