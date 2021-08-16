@@ -4,16 +4,9 @@ import {
     Switch,
     Route,
     Redirect,
-   
 } from 'react-router-dom';
 
-
-
-
-
-
 // import { MuiThemeProvider } from '@material-ui/core';
-
 
 import NFY from './views/NFY';
 import BitAlliance from './views/BitAlliance';
@@ -27,12 +20,15 @@ import Layout from './layout';
 
 import './App.css';
 
-
-
 function App() {
     return (
         <Router>
             <Switch>
+                <Route path="/" exact>
+                    <Layout>
+                        <NFY />
+                    </Layout>
+                </Route>
                 <Route path="/nfy" exact>
                     <Layout>
                         <NFY />
@@ -43,7 +39,7 @@ function App() {
                         <BitAlliance />
                     </Layout>
                 </Route>
-               
+
                 {/* <Route path="/what-is-nfy" exact>
                     <Layout>
                         <WhatIsNFY />
