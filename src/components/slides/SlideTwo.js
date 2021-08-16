@@ -72,7 +72,8 @@ function SlideTwo() {
                                 nfy staking vault v2
                             </Typography>
                             <div className={clsx(styles.pairContainer)}>
-                                <Typography variant="h6"
+                                <Typography
+                                    variant="h6"
                                     component="span"
                                     color="secondary"
                                     className={clsx(styles.textUppercase)}
@@ -83,7 +84,7 @@ function SlideTwo() {
                                     component="span"
                                     className={clsx(styles.textUppercase)}
                                 >
-                                    
+                                    n/a
                                 </Typography>
                             </div>
                             <Typography
@@ -241,7 +242,8 @@ function SlideTwo() {
                                 nfy/eth staking vault v2
                             </Typography>
                             <div className={clsx(styles.pairContainer)}>
-                                <Typography variant="h6"
+                                <Typography
+                                    variant="h6"
                                     component="span"
                                     color="secondary"
                                     className={clsx(styles.textUppercase)}

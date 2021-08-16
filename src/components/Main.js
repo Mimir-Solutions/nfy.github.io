@@ -24,15 +24,16 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     carouselContainer: {
-        display: 'flex',
-        flexDirection: 'row',
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
         [theme.breakpoints.down('sm')]: {
-            flexDirection: 'column-reverse',
-            alignItems: 'center',
+            // flexDirection: 'column-reverse',
+            flexWrap: 'wrap',
         },
+    },
+    mobileColumn: {
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        justifyContent: 'space-between',
+        height: '100%',
     },
 }));
 
@@ -256,7 +257,7 @@ export const Main = (props) => {
                         <SlideThree />
                     </Carousel>
                 </Grid>
-                <Grid xs={12} item md={6} container alignItems="center">
+                <Grid xs={12} item md={6} alignItems="center">
                     <Box
                         display="flex"
                         flexDirection="column"
@@ -265,13 +266,14 @@ export const Main = (props) => {
                         borderColor={[500]}
                         padding={2}
                         flex={1}
+                        className={styles.mobileColumn}
                     >
                         <Box display="flex" justifyContent="space-between">
                             <Typography
                                 className={clsx(styles.textUppercase)}
-                                variant="h6"
+                                variant="h5"
                             >
-                                Trading
+                                Trading - NFY
                             </Typography>
                             {/* <IconButton>
                             <Settings color="white" />
@@ -281,29 +283,29 @@ export const Main = (props) => {
                             display="flex"
                             justifyContent="space-between"
                             flexWrap="wrap"
+                            className={styles.mobileColumn}
 
                             // You can stack values you the flex box column, that is how I was able to show underlined value.
                         >
-                            <Typography variant="p">NFY</Typography>
                             <Box display="flex" flexDirection="column">
-                                <Typography variant="p">Value</Typography>
-                                <Typography variant="p">$0</Typography>
+                                <Typography variant="h6">Value</Typography>
+                                <Typography variant="h6">$0</Typography>
                             </Box>
                             <Box display="flex" flexDirection="column">
-                                <Typography variant="p">Value</Typography>
-                                <Typography variant="p">$0</Typography>
+                                <Typography variant="h6">Value</Typography>
+                                <Typography variant="h6">$0</Typography>
                             </Box>
 
                             <Box display="flex" flexDirection="column">
-                                <Typography variant="p">
+                                <Typography variant="h6">
                                     7d Supply APR
                                 </Typography>
-                                <Typography variant="p">$500</Typography>
+                                <Typography variant="h6">$500</Typography>
                             </Box>
 
                             <Box display="flex" flexDirection="column">
-                                <Typography variant="p">VALUE</Typography>
-                                <Typography variant="p">$1212.45</Typography>
+                                <Typography variant="h6">VALUE</Typography>
+                                <Typography variant="h6">$1212.45</Typography>
                             </Box>
 
                             <Box>
