@@ -34,8 +34,7 @@ function BitAlliance() {
                     color: '#39FF14',
                 }}
             >
-                “Tracking your investments is what we can give you, more tokens
-                coming soon”
+                “Tracking your investments is what we can give you”
             </Typography>
             <br></br>
         </div>
