@@ -49,7 +49,7 @@ function SlideThree() {
     const [method, setMethod] = useState('deposit');
 
     return (
-        <Grid item>
+        <Grid item xs={12}>
             <Box
                 display="flex"
                 flexDirection="row"

@@ -23,6 +23,17 @@ const useStyles = makeStyles((theme) => ({
             justifyContent: 'flex-start',
         },
     },
+    carouselContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column-reverse',
+            alignItems: 'center',
+        },
+    },
 }));
 
 export const Main = (props) => {
@@ -214,91 +225,101 @@ export const Main = (props) => {
                 </Grid>
             </Grid>
             <br></br>
-            <Grid xs={12} item>
-                <Box
-                    display="flex"
-                    flexDirection="column"
-                    marginBottom={3}
-                    border="1px solid green"
-                    borderColor={[500]}
-                    padding={2}
-                >
-                    <Box display="flex" justifyContent="space-between">
-                        <Typography
-                            className={clsx(styles.textUppercase)}
-                            variant="h6"
-                        >
-                            Trading
-                        </Typography>
-                        {/* <IconButton>
-                            <Settings color="white" />
-                        </IconButton> */}
-                    </Box>
+            <Grid
+                item
+                container
+                xs={12}
+                spacing={1}
+                className={styles.carouselContainer}
+            >
+                <Grid container xs={12} md={6} justifyContent="center" item>
+                    <Carousel
+                        navButtonsAlwaysVisible
+                        cycleNavigation
+                        indicatorIconButtonProps={{ className: 'indicator' }}
+                        activeIndicatorIconButtonProps={{
+                            className: 'active-indicator',
+                        }}
+                        autoPlay={false}
+                        animation="slide"
+                        indicatorContainerProps={{
+                            style: {
+                                position: 'absolute',
+                                top: 0,
+                                left: 0,
+                            },
+                        }}
+                        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 carousel"
+                    >
+                        <SlideOne />
+                        <SlideTwo />
+                        <SlideThree />
+                    </Carousel>
+                </Grid>
+                <Grid xs={12} item md={6} container alignItems="center">
                     <Box
                         display="flex"
-                        justifyContent="space-between"
-                        flexWrap="wrap"
-
-                        // You can stack values you the flex box column, that is how I was able to show underlined value.
+                        flexDirection="column"
+                        marginBottom={3}
+                        border="1px solid green"
+                        borderColor={[500]}
+                        padding={2}
+                        flex={1}
                     >
-                        <Typography variant="p">NFY</Typography>
-                        <Box display="flex" flexDirection="column">
-                            <Typography variant="p">Value</Typography>
-                            <Typography variant="p">$0</Typography>
+                        <Box display="flex" justifyContent="space-between">
+                            <Typography
+                                className={clsx(styles.textUppercase)}
+                                variant="h6"
+                            >
+                                Trading
+                            </Typography>
+                            {/* <IconButton>
+                            <Settings color="white" />
+                        </IconButton> */}
                         </Box>
-                        <Box display="flex" flexDirection="column">
-                            <Typography variant="p">Value</Typography>
-                            <Typography variant="p">$0</Typography>
-                        </Box>
+                        <Box
+                            display="flex"
+                            justifyContent="space-between"
+                            flexWrap="wrap"
 
-                        <Box display="flex" flexDirection="column">
-                            <Typography variant="p">7d Supply APR</Typography>
-                            <Typography variant="p">$500</Typography>
-                        </Box>
+                            // You can stack values you the flex box column, that is how I was able to show underlined value.
+                        >
+                            <Typography variant="p">NFY</Typography>
+                            <Box display="flex" flexDirection="column">
+                                <Typography variant="p">Value</Typography>
+                                <Typography variant="p">$0</Typography>
+                            </Box>
+                            <Box display="flex" flexDirection="column">
+                                <Typography variant="p">Value</Typography>
+                                <Typography variant="p">$0</Typography>
+                            </Box>
 
-                        <Box display="flex" flexDirection="column">
-                            <Typography variant="p">VALUE</Typography>
-                            <Typography variant="p">$1212.45</Typography>
-                        </Box>
+                            <Box display="flex" flexDirection="column">
+                                <Typography variant="p">
+                                    7d Supply APR
+                                </Typography>
+                                <Typography variant="p">$500</Typography>
+                            </Box>
 
-                        <Box>
-                            {/*                                
+                            <Box display="flex" flexDirection="column">
+                                <Typography variant="p">VALUE</Typography>
+                                <Typography variant="p">$1212.45</Typography>
+                            </Box>
+
+                            <Box>
+                                {/*                                
                             <Button className="btn btn-secondary py-2 px-3 d-inline-block mr-1">
                                 Options
                             </Button> */}
-                            {/* <Button className="btn btn-primary py-2 px-3 d-inline-block ml-1">
+                                {/* <Button className="btn btn-primary py-2 px-3 d-inline-block ml-1">
                                 Details
                                 <br></br>
                                 
                             </Button> */}
+                            </Box>
                         </Box>
                     </Box>
-                </Box>
-            </Grid>
-
-            <Grid container justifyContent="center" item>
-                <Carousel
-                    navButtonsAlwaysVisible
-                    cycleNavigation
-                    indicatorIconButtonProps={{ className: 'indicator' }}
-                    activeIndicatorIconButtonProps={{
-                        className: 'active-indicator',
-                    }}
-                    autoPlay={false}
-                    animation="slide"
-                    indicatorContainerProps={{
-                        style: {
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                        },
-                    }}
-                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 MuiGrid-grid-lg-6 carousel"
-                >
-                    <SlideOne />
-                    <SlideTwo />
-                    <SlideThree />
-                </Carousel>
+                </Grid>
             </Grid>
         </Grid>
     );

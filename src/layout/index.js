@@ -19,9 +19,8 @@ import { FaDiscord, FaTelegram, FaTwitter } from 'react-icons/fa';
 import { green } from '@material-ui/core/colors';
 import { createTheme } from '@material-ui/core/styles';
 import clsx from 'clsx';
-import { useEthers, useEtherBalance } from '@usedapp/core'
-import { formatEther } from '@ethersproject/units'
-
+import { useEthers, useEtherBalance } from '@usedapp/core';
+import { formatEther } from '@ethersproject/units';
 
 let theme = createTheme({
     palette: {
@@ -99,8 +98,6 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-
-
 const dummyCategories = [
     {
         name: 'NFY',
@@ -133,15 +130,14 @@ const dummyCategories = [
 ];
 function ResponsiveDrawer({ children }) {
     const classes = useStyles();
-    const { activateBrowserWallet, account } = useEthers()
-    const etherBalance = useEtherBalance(account)
+    const { activateBrowserWallet, account } = useEthers();
+    const etherBalance = useEtherBalance(account);
     // const theme = useTheme();
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [activeRoute, setActiveRoute] = React.useState(false);
     function handleDrawerToggle() {
         setMobileOpen(!mobileOpen);
     }
-
 
     const drawer = (
         <>
@@ -167,14 +163,24 @@ function ResponsiveDrawer({ children }) {
 
     const ConnectWalletSection = (
         <>
-            {!account && <Button onClick={() => activateBrowserWallet()} variant="outlined" color="inherit">
-                            Connect Wallet
-                        </Button>}
-            
-            {(account && etherBalance) && <p>{String(account).substr(0,6)} {formatEther(etherBalance)} ETH</p>}
+            {!account && (
+                <Button
+                    onClick={() => activateBrowserWallet()}
+                    variant="outlined"
+                    color="inherit"
+                >
+                    Connect Wallet
+                </Button>
+            )}
+
+            {account && etherBalance && (
+                <p>
+                    {String(account).substr(0, 6)} {formatEther(etherBalance)}{' '}
+                    ETH
+                </p>
+            )}
         </>
     );
-
 
     return (
         <div className={classes.root}>
@@ -204,11 +210,9 @@ function ResponsiveDrawer({ children }) {
                         <Typography variant="h6" noWrap>
                             Dashboard
                         </Typography>
-                        
 
                         {ConnectWalletSection}
                     </Toolbar>
-                    
                 </AppBar>
 
                 <nav className={clsx(classes.nav)}>
