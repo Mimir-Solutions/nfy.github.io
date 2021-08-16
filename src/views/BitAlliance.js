@@ -19,7 +19,7 @@ function BitAlliance() {
     
     <br></br>
     
-    <Typography variant="h6"style={{textAlign:'center', marginLeft:'100px',marginRight:'100px', color:'#39FF14' }}>“Tracking your investments is what we can give you, there more tokens coming soon”
+    <Typography variant="h6"style={{textAlign:'center', marginLeft:'100px',marginRight:'100px', color:'#39FF14' }}>“Tracking Hello world your investments is what we can give you, there more tokens coming soon”
 </Typography>
 <br></br>
     </div>
