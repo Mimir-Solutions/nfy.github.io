@@ -244,23 +244,23 @@ function ResponsiveDrawer({ children }) {
                             </IconButton>
                             
                             <NavLink
-                                to="/Diamond"
+                                to="/Dashboard"
                                 style={{
                                     textDecoration: 'none',
                                     color: theme.palette.secondary.light,
                                 }}
-                                onClick={() => setActiveRoute('Diamond')}
+                                onClick={() => setActiveRoute('Dashboard')}
                                 className={
-                                    activeRoute === 'Diamond'
+                                    activeRoute === 'Dashboard'
                                         ? 'active'
                                         : ''
                                 }
                             >
                                 <ListItem button>
                                     
-                                       <MenuIcon />
-                                
-                                    <ListItemText primary="Diamond" />
+                                       {/* <MenuIcon />
+                                 */}
+                                    {/* <ListItemText primary="Dashboard" /> */}
                                 </ListItem>
                             </NavLink> 
 
