@@ -16,7 +16,7 @@ import BitAlliance from './views/BitAlliance';
 // import Mimir from './views/Mimir';
 // import Pantheon from './views/Pantheon';
 import Layout from './layout';
-// import WhatIsNFY from './views/WhatIsNFY';
+import Diamond from './views/Diamond';
 
 import './App.css';
 
@@ -34,17 +34,16 @@ function App() {
                         <NFY />
                     </Layout>
                 </Route>
+                <Route path="/diamond" exact>
+                    <Layout>
+                        <Diamond />
+                    </Layout>
+                </Route>
                 <Route path="/bit-alliance" exact>
                     <Layout>
                         <BitAlliance />
                     </Layout>
                 </Route>
-
-                {/* <Route path="/what-is-nfy" exact>
-                    <Layout>
-                        <WhatIsNFY />
-                    </Layout>
-                </Route> */}
 
                 {/* <Route path="/acme" exact>
                     <Layout>

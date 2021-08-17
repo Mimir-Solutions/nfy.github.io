@@ -104,10 +104,14 @@ const dummyCategories = [
         route: 'nfy',
     },
     {
+        name: 'Diamond',
+        route: 'Diamond',
+    },
+    {
         name: 'Bit Alliance',
         route: 'bit-alliance',
     },
-    // {
+    // // {
     //     name: 'Mimir',
     //     route: 'mimir',
     // },
@@ -238,27 +242,28 @@ function ResponsiveDrawer({ children }) {
                             >
                                 <CloseIcon />
                             </IconButton>
-                            {/* 
+                            
                             <NavLink
-                                to="/what-is-nfy"
+                                to="/Diamond"
                                 style={{
                                     textDecoration: 'none',
                                     color: theme.palette.secondary.light,
                                 }}
-                                onClick={() => setActiveRoute('what-is-nfy')}
+                                onClick={() => setActiveRoute('Diamond')}
                                 className={
-                                    activeRoute === 'what-is-nfy'
+                                    activeRoute === 'Diamond'
                                         ? 'active'
                                         : ''
                                 }
                             >
                                 <ListItem button>
-                                    <IconButton>
-                                        <FaInfoCircle size={32} />
-                                    </IconButton>
-                                    <ListItemText primary="What is NFY?" />
+                                    
+                                       <MenuIcon />
+                                
+                                    <ListItemText primary="Diamond" />
                                 </ListItem>
-                            </NavLink> */}
+                            </NavLink> 
+
 
                             {drawer}
                         </Drawer>
@@ -273,28 +278,6 @@ function ResponsiveDrawer({ children }) {
                             }}
                         >
                             <div className={classes.toolbar} />
-
-                            {/* <NavLink
-                                to="/what-is-nfy"
-                                style={{
-                                    textDecoration: 'none',
-                                    color: theme.palette.secondary.light,
-                                }}
-                                onClick={() => setActiveRoute('what-is-nfy')}
-                                className={
-                                    activeRoute === 'what-is-nfy'
-                                        ? 'active'
-                                        : ''
-                                }
-                            >
-                                <ListItem button>
-                                    <IconButton>
-                                        <FaInfoCircle size={32} />
-                                    </IconButton>
-                                    <ListItemText primary="What is NFY?" />
-                                </ListItem>
-                            </NavLink> */}
-
                             {drawer}
                         </Drawer>
                     </Hidden>
