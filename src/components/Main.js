@@ -233,7 +233,7 @@ export const Main = (props) => {
                 spacing={1}
                 className={styles.carouselContainer}
             >
-                <Grid container xs={12} md={6} justifyContent="center" item>
+                <Grid container xs={12} md={8} justifyContent="center" item>
                     <Carousel
                         navButtonsAlwaysVisible
                         cycleNavigation
@@ -257,7 +257,7 @@ export const Main = (props) => {
                         <SlideThree />
                     </Carousel>
                 </Grid>
-                <Grid xs={12} item md={6} alignItems="center">
+                <Grid xs={12} item md={4} alignItems="center">
                     <Box
                         display="flex"
                         flexDirection="column"
@@ -267,6 +267,7 @@ export const Main = (props) => {
                         padding={2}
                         flex={1}
                         className={styles.mobileColumn}
+                        marginLeft={2}
                     >
                         <Box display="flex" justifyContent="space-between">
                             <Typography
