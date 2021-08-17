@@ -104,7 +104,7 @@ const dummyCategories = [
         route: 'nfy',
     },
     {
-        name: 'Diamond',
+        name: 'Diamond NFY',
         route: 'Diamond',
     },
     {
