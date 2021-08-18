@@ -8,7 +8,7 @@ import Page3 from '../components/diamond/Page3';
 import { Grid } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
-    container: {},
+    container: { display: 'flex', justifyContent: 'center' },
 }));
 
 function Diamond() {

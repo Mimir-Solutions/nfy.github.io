@@ -1,4 +1,5 @@
 import {
+    Box,
     Button,
     Grid,
     Paper,
@@ -26,6 +27,15 @@ function Page3({ selectedBlocks, selectedFacets }) {
                             </TableRow>
                         </TableHead>
                         <TableBody>
+                            {selectedBlocks.map((block) => (
+                                <TableRow key={block}>
+                                    <TableCell>{block}</TableCell>
+                                    <TableCell>1</TableCell>
+                                    <TableCell>
+                                        <Button variant="text">Edit</Button>{' '}
+                                    </TableCell>
+                                </TableRow>
+                            ))}
                             {selectedFacets.map((facet) => (
                                 <TableRow key={facet.name}>
                                     <TableCell>{facet.name}</TableCell>
@@ -35,20 +45,43 @@ function Page3({ selectedBlocks, selectedFacets }) {
                                     </TableCell>
                                 </TableRow>
                             ))}
-                            {selectedBlocks.map((block) => (
-                                <TableRow key={block}>
-                                    <TableCell colSpan={2}>{block}</TableCell>
-                                    <TableCell>
-                                        <Button variant="text">Edit</Button>{' '}
-                                    </TableCell>
-                                </TableRow>
-                            ))}
                         </TableBody>
                     </Table>
                 </TableContainer>
             </Grid>
             <Grid xs={12} md={4} item>
-                <Typography>Deploy</Typography>
+                <Box padding={3} border="1px solid">
+                    <Box padding={1} border="1px solid">
+                        {selectedBlocks.map((block) => (
+                            <Typography key={block}>
+                                {block}: &nbsp;1 NFY
+                            </Typography>
+                        ))}
+                        {selectedFacets.map((facet) => (
+                            <Typography key={facet.name}>
+                                {facet.name}:&nbsp;{facet.value}&nbsp;NFY
+                            </Typography>
+                        ))}
+                        <Box marginTop={3}>
+                            <Typography>
+                                Total:&nbsp;
+                                {selectedFacets.reduce(
+                                    (prevSum, currentFacet) =>
+                                        prevSum + Number(currentFacet.value),
+                                    0
+                                ) +
+                                    selectedBlocks.reduce(
+                                        (prevSum) => prevSum + 1,
+                                        0
+                                    )}
+                                &nbsp;NFY
+                            </Typography>
+                        </Box>
+                    </Box>
+                    <Box display="flex" justifyContent="center" marginTop={3}>
+                        <Button variant="contained">Deploy</Button>
+                    </Box>
+                </Box>
             </Grid>
         </Grid>
     );
