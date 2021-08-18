@@ -20,7 +20,7 @@ function Diamond() {
     const [values, setValues] = useState({
         Rebase: '0',
         Yeam: '0',
-        FOT: '0',
+        Fot: '0',
         ALPHA: '0',
         BETA: '0',
         Foo: '0',
