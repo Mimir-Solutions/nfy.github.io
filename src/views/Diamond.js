@@ -16,13 +16,17 @@ function Diamond() {
 
     const [step, setStep] = useState(0);
     const [selectedBlocks, setSelectedBlocks] = useState([]);
+    const [selectedFacets, setSelectedFacets] = useState([]);
 
     const allSteps = [
         <Page1
             selectedBlocks={selectedBlocks}
             setSelectedBlocks={setSelectedBlocks}
         />,
-        <Page2 />,
+        <Page2
+            selectedFacets={selectedFacets}
+            setSelectedFacets={setSelectedFacets}
+        />,
         <Page3 />,
     ];
 

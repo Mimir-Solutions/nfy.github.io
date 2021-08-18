@@ -41,7 +41,7 @@ function Page1({ selectedBlocks, setSelectedBlocks }) {
     return (
         <Grid item xs={12} container spacing={3}>
             {data.map((block) => (
-                <Grid key={block} item xs={6} sm={4}>
+                <Grid key={block} item xs={12} sm={4}>
                     <Box
                         display="flex"
                         flexDirection="column"
