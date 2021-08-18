@@ -23,10 +23,10 @@ function Diamond() {
         Fot: '0',
         ALPHA: '0',
         BETA: '0',
-        Foo: '0',
+        GAMMA: '0',
     });
 
-    const facets = ['Rebase', 'Yeam', 'Fot', 'ALPHA', 'BETA', 'Foo'];
+    const facets = ['Rebase', 'Yeam', 'Fot', 'ALPHA', 'BETA', 'GAMMA'];
 
     const allSteps = [
         <Page1

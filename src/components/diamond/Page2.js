@@ -75,7 +75,7 @@ function Page2({
                         flexDirection="column"
                         justifyContent="center"
                         borderColor="primary"
-                        border="1px solid"
+                        border="1px solid green"
                         padding={3}
                     >
                         <Box display="flex" alignItems="center">
