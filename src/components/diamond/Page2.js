@@ -14,28 +14,21 @@ function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
-function Page2({ selectedFacets, setSelectedFacets }) {
+function Page2({
+    selectedFacets,
+    setSelectedFacets,
+    facets,
+    values,
+    setValues,
+}) {
     const [open, setOpen] = React.useState(false);
     const [message, setMessage] = useState('');
-
-    const [values, setValues] = useState({
-        Rebase: '0',
-        Yeam: '0',
-        Fot: '0',
-        Abc: '0',
-        XYZ: '0',
-        Foo: '0',
-    });
 
     const handleClick = (block, value) => {
         if (selectedFacets.find((b) => b.name === block)) {
             setSelectedFacets(selectedFacets.filter((b) => b.name !== block));
             setMessage(`${block} unselected`);
         } else {
-            console.log(
-                '🚀 ~ file: Page2.js ~ line 41 ~ handleClick ~ value',
-                value
-            );
             setSelectedFacets([...selectedFacets, { name: block, value }]);
             setMessage(`${block} selected`);
         }
@@ -51,7 +44,26 @@ function Page2({ selectedFacets, setSelectedFacets }) {
         setOpen(false);
     };
 
-    const facets = ['Rebase', 'Yeam', 'Fot', 'Abc', 'XYZ', 'Foo'];
+    const onChange = (e, facet) => {
+        const foundFacet = selectedFacets.find(
+            (_facet) => _facet.name === facet
+        );
+
+        if (foundFacet) {
+            setSelectedFacets([
+                ...selectedFacets.filter((f) => f.name !== foundFacet.name),
+                {
+                    ...foundFacet,
+                    value: e.target.value,
+                },
+            ]);
+        }
+
+        setValues({
+            ...values,
+            [facet]: e.target.value,
+        });
+    };
 
     return (
         <Grid item xs={12} container spacing={3}>
@@ -93,18 +105,7 @@ function Page2({ selectedFacets, setSelectedFacets }) {
                                 color="secondary"
                                 variant="outlined"
                                 defaultValue={values[facet]}
-                                onChange={(e) => {
-                                    const res = {
-                                        ...values,
-                                        [facet]: e.target.value,
-                                    };
-                                    console.log(
-                                        '🚀 ~ file: Page2.js ~ line 95 ~ Page2 ~ res',
-                                        res
-                                    );
-
-                                    setValues(res);
-                                }}
+                                onChange={(e) => onChange(e, facet)}
                             />
                         </Box>
                         <Box justifySelf="flex-end" flex={0} marginLeft="auto">

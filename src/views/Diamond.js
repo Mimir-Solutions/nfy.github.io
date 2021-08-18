@@ -17,6 +17,16 @@ function Diamond() {
     const [step, setStep] = useState(0);
     const [selectedBlocks, setSelectedBlocks] = useState([]);
     const [selectedFacets, setSelectedFacets] = useState([]);
+    const [values, setValues] = useState({
+        Rebase: '0',
+        Yeam: '0',
+        Fot: '0',
+        Abc: '0',
+        XYZ: '0',
+        Foo: '0',
+    });
+
+    const facets = ['Rebase', 'Yeam', 'Fot', 'Abc', 'XYZ', 'Foo'];
 
     const allSteps = [
         <Page1
@@ -26,6 +36,9 @@ function Diamond() {
         <Page2
             selectedFacets={selectedFacets}
             setSelectedFacets={setSelectedFacets}
+            facets={facets}
+            values={values}
+            setValues={setValues}
         />,
         <Page3
             selectedBlocks={selectedBlocks}
