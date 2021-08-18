@@ -18,15 +18,29 @@ function Page2({ selectedFacets, setSelectedFacets }) {
     const [open, setOpen] = React.useState(false);
     const [message, setMessage] = useState('');
 
-    const handleClick = (block) => {
-        if (selectedFacets.find((b) => b === block)) {
-            setSelectedFacets(selectedFacets.filter((b) => b !== block));
+    const [values, setValues] = useState({
+        Rebase: '0',
+        Yeam: '0',
+        Fot: '0',
+        Abc: '0',
+        XYZ: '0',
+        Foo: '0',
+    });
+
+    const handleClick = (block, value) => {
+        if (selectedFacets.find((b) => b.name === block)) {
+            setSelectedFacets(selectedFacets.filter((b) => b.name !== block));
             setMessage(`${block} unselected`);
         } else {
-            setSelectedFacets([...selectedFacets, block]);
+            console.log(
+                '🚀 ~ file: Page2.js ~ line 41 ~ handleClick ~ value',
+                value
+            );
+            setSelectedFacets([...selectedFacets, { name: block, value }]);
             setMessage(`${block} selected`);
         }
         setOpen(true);
+        console.log({ selectedFacets });
     };
 
     const handleClose = (event, reason) => {
@@ -38,6 +52,7 @@ function Page2({ selectedFacets, setSelectedFacets }) {
     };
 
     const facets = ['Rebase', 'Yeam', 'Fot', 'Abc', 'XYZ', 'Foo'];
+
     return (
         <Grid item xs={12} container spacing={3}>
             {facets.map((facet) => (
@@ -55,10 +70,12 @@ function Page2({ selectedFacets, setSelectedFacets }) {
                             <Checkbox
                                 checked={
                                     selectedFacets.findIndex(
-                                        (_facet) => _facet === facet
+                                        (_facet) => _facet.name === facet
                                     ) > -1
                                 }
-                                onChange={() => handleClick(facet)}
+                                onChange={() =>
+                                    handleClick(facet, values[facet])
+                                }
                                 color="secondary"
                             />
                             <Typography variant="body1">{facet}</Typography>
@@ -75,6 +92,19 @@ function Page2({ selectedFacets, setSelectedFacets }) {
                                 placeholder="Value"
                                 color="secondary"
                                 variant="outlined"
+                                defaultValue={values[facet]}
+                                onChange={(e) => {
+                                    const res = {
+                                        ...values,
+                                        [facet]: e.target.value,
+                                    };
+                                    console.log(
+                                        '🚀 ~ file: Page2.js ~ line 95 ~ Page2 ~ res',
+                                        res
+                                    );
+
+                                    setValues(res);
+                                }}
                             />
                         </Box>
                         <Box justifySelf="flex-end" flex={0} marginLeft="auto">

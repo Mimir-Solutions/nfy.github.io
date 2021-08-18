@@ -27,7 +27,10 @@ function Diamond() {
             selectedFacets={selectedFacets}
             setSelectedFacets={setSelectedFacets}
         />,
-        <Page3 />,
+        <Page3
+            selectedBlocks={selectedBlocks}
+            selectedFacets={selectedFacets}
+        />,
     ];
 
     return (
