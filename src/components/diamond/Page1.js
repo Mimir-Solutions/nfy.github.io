@@ -48,7 +48,7 @@ function Page1({ selectedBlocks, setSelectedBlocks }) {
                         alignItems="center"
                         justifyContent="center"
                         borderColor="primary"
-                        border="1px solid"
+                        border="1px solid green"
                         padding={3}
                     >
                         <Typography variant="body1">{block}</Typography>
