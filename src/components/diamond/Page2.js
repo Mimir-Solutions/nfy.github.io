@@ -6,7 +6,7 @@ import {
     Snackbar,
     Typography,
     TextField,
-    Button,
+    // Button,
 } from '@material-ui/core';
 import MuiAlert from '@material-ui/lab/Alert';
 
@@ -66,7 +66,7 @@ function Page2({
     };
 
     return (
-        <Grid item xs={12} container spacing={3}>
+        <Grid item xs={12} container spacing={2}>
             {facets.map((facet) => (
                 <Grid key={facet} item xs={12} sm={4}>
                     <Box
@@ -108,9 +108,9 @@ function Page2({
                                 onChange={(e) => onChange(e, facet)}
                             />
                         </Box>
-                        <Box justifySelf="flex-end" flex={0} marginLeft="auto" >
+                        {/* <Box justifySelf="flex-end" flex={0} marginLeft="auto" >
                             <Button variant="contained" color="secondary">Info</Button>
-                        </Box>
+                        </Box> */}
                     </Box>
                 </Grid>
             ))}

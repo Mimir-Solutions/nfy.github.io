@@ -5,7 +5,7 @@ import clsx from 'clsx';
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        marginTop: theme.spacing(3),
+        marginTop: theme.spacing(2),
     },
     btn: {
         display: 'flex',

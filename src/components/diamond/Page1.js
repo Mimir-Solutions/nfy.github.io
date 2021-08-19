@@ -52,7 +52,7 @@ function Page1({ selectedBlocks, setSelectedBlocks }) {
                         padding={3}
                     >
                         <Typography variant="body1">{block}</Typography>
-                        <Box marginTop={3}>
+                        <Box marginTop={2}>
                             <Button
                                 variant="contained" color="secondary"
                                 onClick={() => handleClick(block)}
