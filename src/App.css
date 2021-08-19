@@ -12,6 +12,10 @@
     background-image: url('./assets/images/drawer/churche-of-the-chain.jpg');
 }
 
+.diamond {
+    background-image: url('./assets/images/drawer/pickAxe.png');
+}
+
 .nfy {
     background-image: url('./assets/images/drawer/nfy.png');
 }
