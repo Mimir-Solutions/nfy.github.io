@@ -50,7 +50,7 @@ function Page3({ selectedBlocks, selectedFacets }) {
                 </TableContainer>
             </Grid>
             <Grid xs={12} md={4} item>
-                <Box padding={2} border="1px solid green">
+                <Box padding={3} border="1px solid green">
                     <Box padding={1} border="1px solid green">
                         {selectedBlocks.map((block) => (
                             <Typography key={block}>
@@ -79,7 +79,7 @@ function Page3({ selectedBlocks, selectedFacets }) {
                         </Box>
                     </Box>
                     <Box display="flex" justifyContent="center" marginTop={3}>
-                        <Button variant="contained">Deploy</Button>
+                        <Button variant="contained" color="secondary">Deploy</Button>
                     </Box>
                 </Box>
             </Grid>

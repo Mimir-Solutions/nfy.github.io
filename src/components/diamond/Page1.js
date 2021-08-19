@@ -54,7 +54,7 @@ function Page1({ selectedBlocks, setSelectedBlocks }) {
                         <Typography variant="body1">{block}</Typography>
                         <Box marginTop={3}>
                             <Button
-                                variant="contained"
+                                variant="contained" color="secondary"
                                 onClick={() => handleClick(block)}
                             >
                                 {selectedBlocks.find((b) => b === block)
