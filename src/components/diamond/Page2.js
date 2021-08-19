@@ -76,7 +76,7 @@ function Page2({
                         justifyContent="center"
                         borderColor="primary"
                         border="1px solid green"
-                        padding={3}
+                        padding={2}
                     >
                         <Box display="flex" alignItems="center">
                             <Checkbox
@@ -93,7 +93,7 @@ function Page2({
                             <Typography variant="body1">{facet}</Typography>
                         </Box>
                         <Box
-                            marginTop={3}
+                            marginTop={2}
                             display="flex"
                             justifyContent="center"
                             style={{
