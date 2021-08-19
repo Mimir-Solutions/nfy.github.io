@@ -108,8 +108,8 @@ function Page2({
                                 onChange={(e) => onChange(e, facet)}
                             />
                         </Box>
-                        <Box justifySelf="flex-end" flex={0} marginLeft="auto" secondary color="green">
-                            <Button variant="contained">Info</Button>
+                        <Box justifySelf="flex-end" flex={0} marginLeft="auto" >
+                            <Button variant="contained" color="secondary">Info</Button>
                         </Box>
                     </Box>
                 </Grid>
