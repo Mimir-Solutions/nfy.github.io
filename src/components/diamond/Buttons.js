@@ -29,7 +29,7 @@ function Buttons({ step, setStep, allSteps }) {
                         onClick={() => {
                             setStep(step - 1);
                         }}
-                        variant="contained"
+                        variant="contained" color="secondary"
                     >
                         Previous
                     </Button>
@@ -43,7 +43,7 @@ function Buttons({ step, setStep, allSteps }) {
                                 setStep(step + 1);
                             }
                         }}
-                        variant="contained"
+                        variant="contained" color="secondary"
                     >
                         Next
                     </Button>
