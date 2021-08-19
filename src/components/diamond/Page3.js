@@ -23,7 +23,7 @@ function Page3({ selectedBlocks, selectedFacets }) {
                             <TableRow>
                                 <TableCell>Type</TableCell>
                                 <TableCell>Value</TableCell>
-                                <TableCell>Actions</TableCell>
+                                {/* <TableCell>Actions</TableCell> */}
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -31,9 +31,9 @@ function Page3({ selectedBlocks, selectedFacets }) {
                                 <TableRow key={block}>
                                     <TableCell>{block}</TableCell>
                                     <TableCell>1</TableCell>
-                                    <TableCell>
+                                    {/* <TableCell>
                                         <Button variant="text">Edit</Button>{' '}
-                                    </TableCell>
+                                    </TableCell> */}
                                 </TableRow>
                             ))}
                             {selectedFacets.map((facet) => (
