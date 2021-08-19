@@ -23,7 +23,7 @@ function Page3({ selectedBlocks, selectedFacets }) {
                             <TableRow>
                                 <TableCell>Type</TableCell>
                                 <TableCell>Value</TableCell>
-                                {/* <TableCell>Actions</TableCell> */}
+                                <TableCell>Time</TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
