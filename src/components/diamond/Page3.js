@@ -10,8 +10,12 @@ import {
     TableHead,
     TableRow,
     Typography,
-} from '@material-ui/core';
+} 
+
+from '@material-ui/core';
+import dateTime from '../../dateTime';
 import React from 'react';
+
 
 function Page3({ selectedBlocks, selectedFacets }) {
     return (
@@ -23,7 +27,7 @@ function Page3({ selectedBlocks, selectedFacets }) {
                             <TableRow>
                                 <TableCell>Type</TableCell>
                                 <TableCell>Value</TableCell>
-                                <TableCell>Time</TableCell>
+                                <TableCell>Date</TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -40,9 +44,10 @@ function Page3({ selectedBlocks, selectedFacets }) {
                                 <TableRow key={facet.name}>
                                     <TableCell>{facet.name}</TableCell>
                                     <TableCell>{facet.value}</TableCell>
-                                    <TableCell>
-                                        <Button variant="text">Edit</Button>
-                                    </TableCell>
+                                    <TableCell><dateTime /></TableCell>
+                                    {/* <TableCell> */}
+                                        {/* <Button variant="text">Edit</Button> */}
+                                    {/* </TableCell> */}
                                 </TableRow>
                             ))}
                         </TableBody>
