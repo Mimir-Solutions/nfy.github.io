@@ -97,9 +97,9 @@ function SlideThree() {
                     </Box>
                     <Box display="flex" className={clsx(styles.pairContainer)}>
                         <Box display="flex" marginRight={3}>
-                            <Typography variant="body2" color="secondary">
+                            {/* <Typography variant="body2" color="secondary">
                                 APY: &nbsp;
-                            </Typography>
+                            </Typography> */}
                             <Typography variant="body2">N/A</Typography>
                         </Box>
                         <Box display="flex">
