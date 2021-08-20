@@ -96,12 +96,12 @@ function SlideThree() {
                         </Typography>
                     </Box>
                     <Box display="flex" className={clsx(styles.pairContainer)}>
-                        <Box display="flex" marginRight={3}>
-                            {/* <Typography variant="body2" color="secondary">
+                        {/* <Box display="flex" marginRight={3}>
+                            <Typography variant="body2" color="secondary">
                                 APY: &nbsp;
-                            </Typography> */}
+                            </Typography>
                             <Typography variant="body2">N/A</Typography>
-                        </Box>
+                        </Box> */}
                         <Box display="flex">
                             <Typography variant="body2" color="secondary">
                                 YOUR REWARDS: &nbsp;
