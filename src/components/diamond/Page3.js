@@ -13,7 +13,8 @@ import {
 } 
 
 from '@material-ui/core';
-import dateTime from '../../dateTime';
+// import dateTime from '../../dateTime';
+
 import React from 'react';
 
 
@@ -44,7 +45,7 @@ function Page3({ selectedBlocks, selectedFacets }) {
                                 <TableRow key={facet.name}>
                                     <TableCell>{facet.name}</TableCell>
                                     <TableCell>{facet.value}</TableCell>
-                                    <TableCell><dateTime /></TableCell>
+                                    <TableCell>Date.now</TableCell>
                                     {/* <TableCell> */}
                                         {/* <Button variant="text">Edit</Button> */}
                                     {/* </TableCell> */}
