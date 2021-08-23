@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
@@ -10,6 +10,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import { Modal } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
@@ -21,6 +22,7 @@ import { createTheme } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import { useEthers, useEtherBalance } from '@usedapp/core';
 import { formatEther } from '@ethersproject/units';
+import WalletConnect from './../components/modals/WalletConnect'
 
 let theme = createTheme({
     palette: {
@@ -42,6 +44,14 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
+    },
+    modal: {
+        position: 'absolute',
+        width: '80%',
+        backgroundColor: theme.palette.background.default,
+        border: '2px solid #000',
+        boxShadow: theme.shadows[5],
+        padding: theme.spacing(2, 4, 3),
     },
     drawer: {
         width: 0,
@@ -165,6 +175,10 @@ function ResponsiveDrawer({ children }) {
         </>
     );
 
+    const [modalWalletOpened, setModalWalletOpened] = useState(false);
+
+    
+
     const ConnectWalletSection = (
         <>
             {!account && (
@@ -178,10 +192,38 @@ function ResponsiveDrawer({ children }) {
             )}
 
             {account && etherBalance && (
-                <p>
-                    {String(account).substr(0, 6)} {formatEther(etherBalance)}{' '}
-                    ETH
-                </p>
+
+                        <p>
+                            
+                            <Modal 
+                                open={modalWalletOpened} 
+                                onClose={() => setModalWalletOpened(false)}
+                                aria-labelledby="wallet-modal"
+                                aria-describedby="wallet-modal-info"
+                            >
+                                <div style={{
+                                    top: `50%`,
+                                    left: `50%`,
+                                    transform: `translate(-50%, -50%)`,
+                                    backgroundColor: theme.palette.background.default
+                                  }} className={classes.modal}>
+                                      <WalletConnect closeModal={() => setModalWalletOpened(false)}></WalletConnect>
+                                  </div>
+                            </Modal>
+
+
+                            <Button
+                                className="ml-3"
+                                onClick={() => setModalWalletOpened(true)}
+                                variant="outlined"
+                                color="inherit"
+                                size="small"
+                            >
+                                {String(account).substr(0, 6)} {formatEther(etherBalance)}{' '} ETH
+                            </Button>
+                        </p>
+                        
+               
             )}
         </>
     );
