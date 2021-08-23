@@ -10,7 +10,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { Grid, Modal } from '@material-ui/core';
+import { Modal } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
@@ -22,6 +22,7 @@ import { createTheme } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import { useEthers, useEtherBalance } from '@usedapp/core';
 import { formatEther } from '@ethersproject/units';
+import WalletConnect from './../components/modals/WalletConnect'
 
 let theme = createTheme({
     palette: {
@@ -46,8 +47,8 @@ const useStyles = makeStyles((theme) => ({
     },
     modal: {
         position: 'absolute',
-        width: 400,
-        backgroundColor: theme.palette.background.paper,
+        width: '80%',
+        backgroundColor: theme.palette.background.default,
         border: '2px solid #000',
         boxShadow: theme.shadows[5],
         padding: theme.spacing(2, 4, 3),
@@ -197,10 +198,17 @@ function ResponsiveDrawer({ children }) {
                             <Modal 
                                 open={modalWalletOpened} 
                                 onClose={() => setModalWalletOpened(false)}
-                                aria-labelledby="simple-modal-title"
-                                aria-describedby="simple-modal-description"
+                                aria-labelledby="wallet-modal"
+                                aria-describedby="wallet-modal-info"
                             >
-                                <div style={classes} className={classes.modal}>Hello</div>
+                                <div style={{
+                                    top: `50%`,
+                                    left: `50%`,
+                                    transform: `translate(-50%, -50%)`,
+                                    backgroundColor: theme.palette.background.default
+                                  }} className={classes.modal}>
+                                      <WalletConnect></WalletConnect>
+                                  </div>
                             </Modal>
 
 

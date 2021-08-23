@@ -1,28 +1,41 @@
-import React, { useState } from 'react';
-import { Box, Button, Grid, Snackbar, Typography, Modal } from '@material-ui/core';
-import MuiAlert from '@material-ui/lab/Alert';
+import React from 'react';
+import { Box, Button, Typography } from '@material-ui/core';
+import { useEthers } from '@usedapp/core';
+import TokenBalanceWidget from  './../widgets/TokenBalanceWidget'
 
 function WalletConnect () {
 
-    const [opened, setOpened] = useState(false);
-
-
-    const openModal = () => {
-        setOpened(true);
-    }
-
-    const closeModal = () => {
-        setOpened(false);
-    }
-
+    const { account, deactivate } = useEthers();
     return (
         <div>
-            <Modal
-                open={opened}
-                onClose={closeModal}
-            >
-                
-            </Modal>
+           <Box>
+                <Typography variant = "h6">Welcome,</Typography>
+                <Typography variant = "button">
+                    { account }
+                </Typography>
+
+                <TokenBalanceWidget
+                    tokenLabel="ETH"
+                    tokenAddress={null}
+                />
+
+                <TokenBalanceWidget
+                    tokenLabel="DAI"
+                    tokenAddress="0x6b175474e89094c44da98b954eedeac495271d0f"
+                />
+
+                <Button
+                    className="mt-3"
+                    onClick={() => deactivate()}
+                    variant="contained"
+                    color="secondary"
+                    size="medium"
+                >
+                    Logout
+                </Button>
+           </Box>
+
+           
         </div>
     )
 }
