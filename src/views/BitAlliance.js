@@ -1,14 +1,14 @@
 import React from 'react';
 import { Typography } from '@material-ui/core';
 import '../../src/index.css';
-// import Main2 from '../components/Main2';
+import Main2 from '../components/Main2';
 
 function BitAlliance() {
     return (
         <div
-        // className= "bitAlliance-view" id="bitAlliance-view"
+        className= "bitAlliance-view" id="bitAlliance-view"
         >
-            {/* <Main2 currency="BitAlliance"/> */}
+             <Main2 currency="BitAlliance"/>
 
             <Typography
                 variant="h5"
