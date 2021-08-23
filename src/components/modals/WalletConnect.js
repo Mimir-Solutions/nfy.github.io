@@ -9,9 +9,9 @@ function WalletConnect ({closeModal}) {
     return (
         <div>
            <Box>
-                <Typography variant = "h6">Welcome,</Typography>
+                <Typography variant = "h6"> Wallet ID &nbsp;{ account }</Typography>
                 <Typography variant = "button">
-                    { account }
+                   
                 </Typography>
 
                 <TokenBalanceWidget
