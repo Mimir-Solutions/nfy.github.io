@@ -207,7 +207,7 @@ function ResponsiveDrawer({ children }) {
                                     transform: `translate(-50%, -50%)`,
                                     backgroundColor: theme.palette.background.default
                                   }} className={classes.modal}>
-                                      <WalletConnect></WalletConnect>
+                                      <WalletConnect closeModal={() => setModalWalletOpened(false)}></WalletConnect>
                                   </div>
                             </Modal>
 

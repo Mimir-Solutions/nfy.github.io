@@ -3,7 +3,7 @@ import { Box, Button, Typography } from '@material-ui/core';
 import { useEthers } from '@usedapp/core';
 import TokenBalanceWidget from  './../widgets/TokenBalanceWidget'
 
-function WalletConnect () {
+function WalletConnect ({closeModal}) {
 
     const { account, deactivate } = useEthers();
     return (
@@ -26,7 +26,10 @@ function WalletConnect () {
 
                 <Button
                     className="mt-3"
-                    onClick={() => deactivate()}
+                    onClick={() => {
+                        closeModal();
+                        deactivate();
+                    }}
                     variant="contained"
                     color="secondary"
                     size="medium"
