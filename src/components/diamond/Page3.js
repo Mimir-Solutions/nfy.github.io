@@ -28,7 +28,7 @@ function Page3({ selectedBlocks, selectedFacets }) {
                             <TableRow>
                                 <TableCell>Type</TableCell>
                                 <TableCell>Value</TableCell>
-                                <TableCell>Date</TableCell>
+                                {/* <TableCell>Date</TableCell> */}
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -45,7 +45,7 @@ function Page3({ selectedBlocks, selectedFacets }) {
                                 <TableRow key={facet.name}>
                                     <TableCell>{facet.name}</TableCell>
                                     <TableCell>{facet.value}</TableCell>
-                                    <TableCell>Date.now</TableCell>
+                                    {/* <TableCell>Date.now</TableCell> */}
                                     {/* <TableCell> */}
                                         {/* <Button variant="text">Edit</Button> */}
                                     {/* </TableCell> */}
