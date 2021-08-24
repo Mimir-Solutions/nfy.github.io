@@ -32,7 +32,7 @@ function Page1({ selectedBlocks, setSelectedBlocks }) {
     const data = [
         'ERC20',
         'ERC1115',
-        'ERC720',
+        'ERC721',
         'BEP20',
         'ALTChain20',
         'Altchain20',
