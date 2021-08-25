@@ -9,7 +9,7 @@ function WalletConnect ({closeModal}) {
     return (
         <div>
            <Box>
-                <Typography variant = "h6"> Wallet ID &nbsp;{ account }</Typography>
+                <Typography variant = "h6"> Wallet ID: &nbsp;{ account }</Typography>
                 <Typography variant = "button">
                    
                 </Typography>
@@ -23,6 +23,7 @@ function WalletConnect ({closeModal}) {
                     tokenLabel="DAI"
                     tokenAddress="0x6b175474e89094c44da98b954eedeac495271d0f"
                 />
+                <br></br>
 
                 <Button
                     className="mt-3"
