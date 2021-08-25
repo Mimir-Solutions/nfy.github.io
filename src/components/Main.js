@@ -70,7 +70,7 @@ export const Main = (props) => {
                             </Typography>
                             {/* <Storefront /> */}
                         </Box>
-                        <Typography variant="p">$15</Typography>
+                        <Typography variant="h6">$15</Typography>
                     </Box>
                 </Grid>
 
@@ -101,7 +101,7 @@ export const Main = (props) => {
                             </Typography>
                             {/* <Storefront /> */}
                         </Box>
-                        <Typography variant="p">$21103</Typography>
+                        <Typography variant="h6">$21103</Typography>
                     </Box>
                 </Grid>
 
@@ -132,7 +132,7 @@ export const Main = (props) => {
                             </Typography>
                             {/* <Storefront /> */}
                         </Box>
-                        <Typography variant="p">65.235</Typography>
+                        <Typography variant="h6">65.235</Typography>
                     </Box>
                 </Grid>
                 <Grid md={4} xs={12} item>
@@ -162,7 +162,7 @@ export const Main = (props) => {
                             </Typography>
                             {/* <Storefront /> */}
                         </Box>
-                        <Typography variant="p">$15</Typography>
+                        <Typography variant="h6">$15</Typography>
                     </Box>
                 </Grid>
                 <Grid md={4} xs={12} item>
@@ -192,7 +192,7 @@ export const Main = (props) => {
 
                             {/* <LocalOfferOutlined /> */}
                         </Box>
-                        <Typography variant="p">$2113</Typography>
+                        <Typography variant="h6">$2113</Typography>
                     </Box>
                 </Grid>
                 <Grid md={4} xs={12} item>
@@ -221,7 +221,7 @@ export const Main = (props) => {
                             </Typography>
                             {/* <DesktopWindows /> */}
                         </Box>
-                        <Typography variant="p">65.23548</Typography>
+                        <Typography variant="h6">65.23548</Typography>
                     </Box>
                 </Grid>
             </Grid>
