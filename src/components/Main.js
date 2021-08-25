@@ -276,9 +276,7 @@ export const Main = (props) => {
                             >
                                 Trading - NFY
                             </Typography>
-                            {/* <IconButton>
-                            <Settings color="white" />
-                        </IconButton> */}
+                          
                         </Box>
                         <Box
                             display="flex"
